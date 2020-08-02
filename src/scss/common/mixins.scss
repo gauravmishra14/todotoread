@@ -1,0 +1,20 @@
+// @mixin flex(
+//   $flex-direction: row,
+//   $justify-content: center,
+//   $align-items: center
+// ) {
+//   display: flex;
+//   flex-direction: $flex-drection;
+//   justify-content: $justify-content;
+//   align-items: $align-items;
+// }
+
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+@mixin heading {
+  @include uppercase;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}

@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.3s;
+  .toread-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+    min-height: 250px;
+    max-width: 350px;
+    width: 100%;
+    .content-wrap {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      background-color: $contentBox;
+      border: 1px solid #ddd;
+      max-width: 300px;
+      width: 100%;
+      height: 200px;
+      left: 50px;
+      top: 50px;
+      padding: 0.5rem 1rem;
+      @include heading;
+      font-size: 0.675rem;
+
+      span {
+        position: absolute;
+        right: 20px;
+        img {
+          transform: rotate(270deg);
+        }
+      }
+    }
+    .img-wrap {
+      position: absolute;
+      z-index: 2;
+      max-width: 300px;
+      width: 100%;
+      height: 200px;
+      .item-num {
+        background-color: teal;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .image {
+      max-width: 300px;
+      width: 100%;
+      min-height: 200px;
+    }
+    @media screen and (max-width: $breakTablet) {
+      max-width: 250px;
+      .content-wrap,
+      .img-wrap {
+        max-width: 200px;
+      }
+      .content-wrap {
+        span {
+          right: 10px;
+        }
+      }
+      .image {
+        max-width: 200px;
+      }
+    }
+  }
+}
